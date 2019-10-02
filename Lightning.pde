@@ -37,10 +37,30 @@ void draw()
   		fill(150);
   		stroke(150);
   		ellipse(BACKGROUND_X/2-75+(j*37.5),15,75,75);
+  		strokeWeight(1);
   	}
 }	
 void mousePressed()
 {
 	startX=BACKGROUND_X/2+(int)(Math.random()*BACKGROUND_X/4)-BACKGROUND_X/8;
 	startY=0;
+}
+void keyPressed(){
+	if(key==32){
+		background(0);
+  		for(int i=0; i<BACKGROUND_X; i++){
+  			ellipse((int)random(0,BACKGROUND_X),(int)random(0,BACKGROUND_Y/2),1,1);
+  			fill(200);
+  			stroke(200);
+  			strokeWeight(1);
+  		}
+  		fill(0,200,0);
+  		stroke(0,200,0);
+  		rect(0,BACKGROUND_Y*3/4,BACKGROUND_X,BACKGROUND_Y/4);
+  		for(int j = 0; j<5; j++){
+  			fill(150);
+  			stroke(150);
+  			ellipse(BACKGROUND_X/2-75+(j*37.5),15,75,75);
+  		}
+	}
 }
